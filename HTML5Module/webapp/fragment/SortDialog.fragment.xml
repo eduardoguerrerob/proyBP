@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleSortDialogConfirm">
+		<sortItems>
+			<ViewSettingsItem text="Business Partner" key="BusinessPartner" selected="true" />
+			<ViewSettingsItem text="BP FullName" key="BusinessPartnerFullName" />
+			<ViewSettingsItem text="Created By" key="CreatedByUser" />
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

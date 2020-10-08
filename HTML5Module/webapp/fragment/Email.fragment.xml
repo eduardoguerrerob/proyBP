@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Table id="id"
+               items="{ModelEmail>/ModelEmail/d/results}">
+		<columns>
+			<Column width="12em">
+				<Text text="Address Id" />
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true" >
+				<Text text="Email Address" />
+			</Column>
+			<!-- <Column minScreenWidth="Tablet" demandPopin="true"><Text text="First Name" /></Column>-->
+		</columns>
+		<items>
+			<ColumnListItem id="list" >
+				<cells>
+					<Text text="{ModelEmail>AddressID}" />
+					<Text text="{ModelEmail>EmailAddress}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>
+

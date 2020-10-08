@@ -1,0 +1,40 @@
+<mvc:View controllerName="egb.HTML5Module.controller.Login" 
+xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>appTitle}">
+                    <content>
+                        <VBox class="sapUiSmallMargin">
+                          <f:SimpleForm id="SimpleFormToolbar" editable="true"  layout="ResponsiveGridLayout"
+                                        labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+                                        adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4"
+                                        emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1"
+                                        columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1" >
+     
+                                <Label id="lbl_user" text="User" labelFor="txt_user"/> 
+                                <Input id="txt_user" required="true" placeholder="Ingrese IS"/> 
+ 
+                                <Label id="lbl_password" text="Password" labelFor="txt_password"/> 
+                                <Input type="Password"   id="txt_password" required="true" placeholder="Ingrese Password"/> 
+                            
+                            </f:SimpleForm>
+                        </VBox>
+                    </content>
+                    <footer>
+                        <Toolbar>
+                            <ToolbarSpacer/>
+                            <Button id="btn_ingresar" type="Emphasized" text="Login" press="onLogin" />
+                            <Button text="Default" press="onPress" />
+                        </Toolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

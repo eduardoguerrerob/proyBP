@@ -1,0 +1,150 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "egb.HTML5Module",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "ach": "ach",
+        "sourceTemplate": {
+            "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+            "version": "1.40.12"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "egb.HTML5Module.view.Login",
+            "type": "XML",
+            "async": true,
+            "id": "Login"
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.1",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "egb.HTML5Module.i18n.i18n"
+                }
+            },
+            "ModelEmail": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
+            },
+            "ModelAddress": {
+                "type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "egb.HTML5Module.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteLogin",
+                    "pattern": "RouteLogin",
+                    "target": [
+                        "TargetLogin"
+                    ]
+                },
+                {
+                    "name": "RouteRegistroBP",
+                    "pattern": "RouteRegistroBP",
+                    "target": [
+                        "RouteRegistroBP"
+                    ]
+                },
+                {
+                    "name": "RouteMenuBP",
+                    "pattern": "RouteMenuBP",
+                    "target": [
+                        "RouteMenuBP"
+                    ]
+                },
+                 {
+                    "name": "RouteConsultaBP",
+                    "pattern": "RouteConsultaBP", 
+                    "target": [
+                        "RouteConsultaBP"
+                    ]
+                },
+                {
+                    "name": "RouteDetailBP",
+                    "pattern": "RouteDetailBP/BP/{BPartner}",
+                    "target": [
+                        "TargetDetailBP"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetLogin": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Login",
+                    "viewName": "Login"
+                },
+                "RouteRegistroBP": {
+                    "viewName": "RegistroBP"
+                },
+                "RouteMenuBP": {
+                    "viewName": "Menu"
+                },
+                "RouteConsultaBP": {
+                    "viewName": "ConsultaBP"
+                },
+                "TargetDetailBP": {
+                    "viewName": "DetailBP"
+                }
+            }
+        }
+    }
+}

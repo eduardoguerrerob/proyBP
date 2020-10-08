@@ -1,0 +1,56 @@
+<mvc:View controllerName="egb.HTML5Module.controller.RegistroBP" 
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titleRegistro}"
+                      showNavButton="true" navButtonPress="onNavBack">
+                    <content>
+                        <VBox class="sapUiSmallMargin">
+                          <f:SimpleForm id="SimpleFormToolbar" editable="true"  layout="ResponsiveGridLayout"
+                                        labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+                                        adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4"
+                                        emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1"
+                                        columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1" >
+     
+                                <Label id="lbl_nit" text="Nit" labelFor="txt_nit"/> 
+                                <Input id="txt_nit" required="true" placeholder="Nit,Cedula"/> 
+ 
+                                <Label id="lbl_nombre" text="Nombre" labelFor="txt_nombre"/> 
+                                <Input id="txt_nombre" required="true" /> 
+ 
+                                <Label id="lbl_pais" text="País" labelFor="txt_pais"/> 
+                                <Input id="txt_pais" required="true"/> 
+ 
+                                <Label id="lbl_ciudad" text="Ciudad" labelFor="txt_ciudad"/> 
+                                <Input id="txt_ciudad" required="true"/> 
+ 
+                                <Label id="lbl_email" text="Email" labelFor="txt_email"/> 
+                                <Input id="txt_email" change="validate"/> 
+ 
+                                <Label id="lbl_direccion" text="Dirección" labelFor="txt_direccion"/> 
+                                <Input id="txt_direccion" /> 
+ 
+                                <Label id="lbl_telefono" text="Telefono" labelFor="txt_telefono"/> 
+                                <Input id="txt_telefono"/> 
+                                
+                            </f:SimpleForm>
+                        </VBox>
+                    </content>
+                    <footer>
+                        <Toolbar>
+                            <ToolbarSpacer/>
+                            <Button id="btn_registrar" type="Emphasized" text="Registrar" press="onRegistro" />
+                            <Button text="Limpiar" press="onLimpiar" />
+                        </Toolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

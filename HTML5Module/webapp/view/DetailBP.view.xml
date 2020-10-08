@@ -1,0 +1,44 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="egb.HTML5Module.controller.DetailBP"
+	xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    >
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>titleConsulta}"
+                      showNavButton="true" navButtonPress="onNavBack">
+					<content>
+						<IconTabBar
+                            id="idIconTabBarMulti"
+                            expanded="{device>/isNoPhone}"
+                            class="sapUiResponsiveContentPadding"
+                            select="onFilterDetail">
+							<items>
+								<IconTabFilter icon="sap-icon://email" 
+                                    key="keyMail">
+								<core:Fragment fragmentName="egb.HTML5Module.fragment.Email" type="XML"/>
+								</IconTabFilter>
+								<IconTabFilter
+                                    icon="sap-icon://addresses"
+                                    class="prueba"
+                                    count=""
+                                    key="keyAddress"
+                                    >
+									<Text text="Attachments go here ..." />
+								</IconTabFilter>
+								<IconTabFilter
+                                    icon="sap-icon://phone"
+                                    count="12"
+                                    key="keyPhone">
+									<Text text="Notes go here ..." />
+								</IconTabFilter>
+							</items>
+						</IconTabBar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

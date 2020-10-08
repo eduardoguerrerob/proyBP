@@ -1,0 +1,61 @@
+<mvc:View controllerName="egb.HTML5Module.controller.ConsultaBP"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Shell id="shell">
+      <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titleConsulta}"
+                      showNavButton="true" navButtonPress="onNavBack">
+                    <content>
+          <ScrollContainer height="100%"  vertical="true" >
+			<Table id="idConsultaBP"
+                items="{/d/results}">
+				<headerToolbar>
+					<OverflowToolbar>
+						<Title text="BusinessPartner" level="H2"/>
+						<ToolbarSpacer/>
+						<Button
+							tooltip="Sort"
+							icon="sap-icon://sort"
+							press="handleSortButtonPressed" />
+						<Button
+							tooltip="Filter"
+							icon="sap-icon://filter"
+							press="handleFilterButtonPressed" />
+						<Button
+							tooltip="Group"
+							icon="sap-icon://group-2"
+							press="handleGroupButtonPressed" />
+						<ToggleButton icon="sap-icon://menu" tooltip="Enable Custom Context Menu" press="onToggleContextMenu" />
+					</OverflowToolbar>
+				</headerToolbar>
+				<infoToolbar>
+					<OverflowToolbar id="vsdFilterBar" visible="false">
+						<Text id="vsdFilterLabel" />
+					</OverflowToolbar>
+				</infoToolbar>
+				<columns>
+					<Column width="12em"><Text text="Business Partner" /></Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true" ><Text text="Business Partner FullName" /></Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true"><Text text="First Name" /></Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true" ><Text text="Created By User" /></Column>
+                </columns>
+				<items>
+					<ColumnListItem id="listItem" type="Navigation" press="OnDetail">
+						<cells>
+							<Text id="IdBusiness" text="{BusinessPartner}" />
+                            <Text text="{BusinessPartnerFullName}" />
+                            <Text text="{FirstName}" />
+                            <Text text="{CreatedByUser}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+          </ScrollContainer> 
+	    </content>
+      </Page>
+    </pages>
+   </App>
+ </Shell>
+</mvc:View>

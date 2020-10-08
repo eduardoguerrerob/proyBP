@@ -1,0 +1,42 @@
+<mvc:View controllerName="egb.HTML5Module.controller.Menu"
+	xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titleMenu}">
+                    <content>
+                        <HBox class="sapUiSmallMargin">
+    	
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Consultar Business Partner"
+		subheader="consulta" press="onPressConsulta">
+		<TileContent unit="UND" footer="1555">
+			<ImageContent src="sap-icon://business-card"  />
+		</TileContent>
+	   </GenericTile>
+
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Registro Business Partner"
+		subheader="registrar" press="onPressRegistro">
+		<TileContent>
+			<ImageContent src="sap-icon://add-contact" />
+		</TileContent>
+	</GenericTile>
+
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Modificación Business Partner"
+		subheader="modificar" press="onPressModificacion">
+		<TileContent>
+			<ImageContent src="sap-icon://user-edit" />
+		</TileContent>
+	</GenericTile>
+	
+ </HBox>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
