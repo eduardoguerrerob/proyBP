@@ -26,7 +26,7 @@
                                     count=""
                                     key="keyAddress"
                                     >
-									<Text text="Attachments go here ..." />
+									<core:Fragment fragmentName="egb.HTML5Module.fragment.Address" type="XML"/>
 								</IconTabFilter>
 								<IconTabFilter
                                     icon="sap-icon://phone"

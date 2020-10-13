@@ -110,7 +110,6 @@ sap.ui.define([
                         console.log("opción Mail")
                         break;
                     case "keyAddress":
-                        console.log("opción Address")
                         this.consultarAddressBP(globalBP, globalAddressID);
                         break;
                     case "keyPhone":

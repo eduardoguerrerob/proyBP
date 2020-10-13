@@ -29,40 +29,24 @@
 			<f:formContainers>
 				<f:FormContainer>
 					<f:formElements>
-						<f:FormElement label="Name">
+						<f:FormElement label="CityName">
 							<f:fields>
-								<Input value="{SupplierName}" id="name"/>
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Street">
-							<f:fields>
-								<Input value="{Street}" />
-								<Input value="{HouseNumber}">
-									<layoutData>
-										<l:GridData span="XL1 L2 M2 S4" />
-									</layoutData>
-								</Input>
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="ZIP Code/City">
-							<f:fields>
-								<Input value="{ZIPCode}">
-									<layoutData>
-										<l:GridData span="XL1 L2 M2 S4" />
-									</layoutData>
-								</Input>
-								<Input value="{City}" />
+								<Label text="{ModelAddress>/ModelAddress/d/CityName}"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Country">
 							<f:fields>
-								<Select id="country" selectedKey="{Country}">
-									<items>
-										<core:Item text="England" key="England"/>
-										<core:Item text="Germany" key="Germany"/>
-										<core:Item text="USA" key="USA"/>
-									</items>
-								</Select>
+								<Label text="{ModelAddress>/ModelAddress/d/Country}"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code/City">
+							<f:fields>
+								<Label text="{ModelAddress>/ModelAddress/d/PostalCode}"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="StreetName">
+							<f:fields>
+								<Label text="{ModelAddress>/ModelAddress/d/StreetName}"/>
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>
